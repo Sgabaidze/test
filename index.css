@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{   
+    
+    background-color: #C0DBD9;
+    padding-inline: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+header{
+    background-color: #7FAFF6;
+    padding: 30px;
+}
+
+.popup-button{
+    width: 206px;
+    height: 39px; 
+    padding: 8px 15px;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: #A5C7F9;
+    color: white;    
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
+  
+  .popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    position: relative;    
+  }
+
+  .popup-content h2{
+    font-size: 53px;
+  }
+
+  .popup-content a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 43px;
+    height: 39px;
+    top: 15px;
+    right: 15px;
+    border-radius: 5px;
+    background-color: #7FAFF6;
+    color: white;
+  }
+
+  .popup-content a:hover {
+    color: red;
+  }
+  
+  .popup:target {
+    display: block;
+  }
+
+.item1 { grid-area: one; }
+.item2 { grid-area: two; }
+.item3 { grid-area: three; }
+.item4 { grid-area: four; }
+.item5 { grid-area: five; }
+
+.item1::after { content: '1'; font-size: 53px; }
+.item2::after { content: '2'; font-size: 53px;  }
+.item3::after { content: '3'; font-size: 53px;  }
+.item4::after { content: '4'; font-size: 53px;  }
+.item5::after { content: '5'; font-size: 53px;  }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'one one two two two three'
+    'four four four four four five';    
+  gap: 10px;
+  background-color: #B3F95A;
+}
+
+.grid-container > div {
+  background-color: #8AD191;
+  text-align: center;
+  padding: 20px 0;
+  height: 198px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-two{
+    background-color:#88B5BF;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.block-two > div{
+    flex-grow: 1;
+    height: 199px;
+    background-color: #0D89B0;
+}
+
+footer{
+    margin-top: 85px;
+    height: 100px;
+    background-color: #7FAFF6;
+}
+
+
+  
